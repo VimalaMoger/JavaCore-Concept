@@ -4,8 +4,7 @@ public interface privateMethodImpl {
 
     public abstract void abstractMethodExample();
 
-    public
-    default void defaultMethodExample() {
+    public default void defaultMethodExample() {
         privateMethodExample();
         privateStaticMethodExample();
         System.out.println("Inside a default method");
