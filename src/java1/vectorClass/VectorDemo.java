@@ -1,4 +1,4 @@
-package java1;
+package java1.vectorClass;
 
 import java.util.Iterator;
 import java.util.Vector;

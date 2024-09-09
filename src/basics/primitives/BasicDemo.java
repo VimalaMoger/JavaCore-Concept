@@ -1,4 +1,4 @@
-package primitives;
+package basics.primitives;
 
 public class BasicDemo {
     public static void main(String[] args) {
