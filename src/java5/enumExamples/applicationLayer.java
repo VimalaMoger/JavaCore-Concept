@@ -21,7 +21,7 @@ public class applicationLayer {
 			s =app.applyOperation(extendingEnum.BASE64_MIMEDECODE, s);
 			System.out.println("Mime decoder in "+s);
 			
-			String originalInput = "test input";
+			String originalInput = "model.test input";
 			String encodedString = new String(Base64.getMimeEncoder().encode(originalInput.getBytes()));
 			String decodedString = new String(Base64.getMimeDecoder().decode(encodedString.getBytes()));
 			System.out.println("*****************************************");

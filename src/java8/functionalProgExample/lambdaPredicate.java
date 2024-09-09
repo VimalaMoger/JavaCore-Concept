@@ -8,10 +8,10 @@ import java.util.function.Predicate;
 public class lambdaPredicate {
 
     public static void main(String[] args) {
-        //Predicate<T>  takes argument returns boolean, uses single abstract test method
+        //Predicate<T>  takes argument returns boolean, uses single abstract model.test method
 
         List<String> wordList= new ArrayList(Arrays.asList("word1", "word2", "word3"));
-        //returns boolean use only test method
+        //returns boolean use only model.test method
         Predicate<List<String>> predicate1= (List<String> list) -> list.isEmpty();
         Predicate<List<String>> predicate2= (List<String> list) -> list.add("word4");
         Predicate<List<String>> predicate3= (List<String> list) -> list.remove("word1");

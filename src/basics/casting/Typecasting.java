@@ -1,4 +1,4 @@
-package primitives;
+package basics.casting;
 
 public class Typecasting {
     public static void main(String[] args) {
@@ -43,6 +43,7 @@ public class Typecasting {
         System.out.println("narrowedByte "+ narrowedByte);
 
         //Truncation
+        //int iTruncated = 0.99;
         int iTruncated = (int)0.99;
         System.out.println("iTruncated "+ iTruncated);
     }

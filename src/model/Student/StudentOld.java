@@ -1,4 +1,4 @@
-package miniProjects.Student;
+package model.Student;
 
 public class StudentOld {
     //instance variables

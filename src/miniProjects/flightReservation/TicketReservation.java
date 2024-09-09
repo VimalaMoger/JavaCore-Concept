@@ -47,7 +47,7 @@ public class TicketReservation {
      * Removes passenger with the given confirmationNumber. Passenger could be      
      * in either confirmedList or waitingList. The implementation to remove the      
      * passenger should go in removePassenger() method and removePassenger method      
-     * will be tested separately by the uploaded test scripts.      
+     * will be tested separately by the uploaded model.test scripts.
      
      * If passenger is in confirmedList, then after removing that passenger, the      
      * passenger at the front of waitingList (if not empty) must be moved into      
