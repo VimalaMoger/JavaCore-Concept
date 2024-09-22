@@ -1,4 +1,4 @@
-package java5.threads.callable;
+package java5.concurrent.threads.callable;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
@@ -11,7 +11,7 @@ public class callableThread implements Callable<Integer>{
 	@Override
 	public Integer call() throws Exception {
 		
-		for(int i=0;i<3;i++) {
+		for(int i = 0; i < 3; i++) {
 			sum += i;
 		}
 		return sum;
@@ -34,12 +34,12 @@ public class callableThread implements Callable<Integer>{
 	}
 
 	class inner implements Callable<String> {
-		String a="2";
-		String b= "3";
+		String a = "2";
+		String b = "3";
 		@Override
 		public String call() throws Exception {
 			if(a.equals(b)) {
-			return a+"="+b;
+			return a + " = " + b;
 			}
 			return a+"!="+b;
 		}

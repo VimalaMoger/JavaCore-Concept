@@ -1,4 +1,4 @@
-package java5.threads.callable;
+package java5.concurrent.threads.callable;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,9 +7,8 @@ import java.util.concurrent.Callable;
 
 public class runnableCallable {
 
-    public static String display(List<String> e) {
-        String s =e.remove(0);
-        //System.out.println(s);
+    public static String display(List<String> str) {
+        String s = str.remove(0);
         return  s;
     }
 
@@ -27,7 +26,7 @@ public class runnableCallable {
         try {
             result = callable.call();
         }catch (Exception e){
-            throw new Exception("The contailner is null");
+            throw new Exception("The container is null");
         }finally {
             System.out.println(wordList);
         }

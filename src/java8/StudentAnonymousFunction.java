@@ -1,16 +1,15 @@
 package java8;
 
 import java4.exceptions.Student;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
-public class studentAnnonymousFunction {
+public class StudentAnonymousFunction {
 	public static void main(String[] args) {
 		List<Student> students = new ArrayList<>();
-		
+
 		Student student1 = new Student(1,"John", "Doel", 43,123, 3.0,'A');
 		Student student2 = new Student(2,"Shally", "Rodrigas", 43,345, 4.0,'B');
 		Student student3 = new Student(3,"Sham", "Austin", 43,678, 1.0,'C');
@@ -31,5 +30,11 @@ public class studentAnnonymousFunction {
 		});
 		System.out.println("Using Comparator .. " );
 		System.out.println(Arrays.toString(stuArray));
+
+		System.out.println(new Student() {
+			@Override public String toString() {
+				return String.valueOf(new Student(1,"John", "Doel", 43,123, 3.0,'A'));
+			}
+		});
 	}
 }

@@ -1,7 +1,7 @@
-package java5.threads.ProducerConsumerProblem;
+package java5.concurrent.threads.multiThreads.ProducerConsumer;
 
 class Q{
-	int n;
+	int val;
 	boolean rest = false;
 	
 	synchronized int get() {
@@ -12,10 +12,10 @@ class Q{
 				System.out.println(e);
 			}
 		}
-			System.out.println("Consuming value of n: " + n);
+			System.out.println(Thread.currentThread().getName()+ " Consuming value of n: " + val);
 			notify();
 			rest = false;
-			return n;
+			return val;
 	}
 
 	synchronized void put(int n) {
@@ -26,8 +26,8 @@ class Q{
 				System.out.println(e);
 			}
 		}
-		this.n =n;
-		System.out.println("Producing value of n: " +n);
+		this.val =n;
+		System.out.println(Thread.currentThread().getName() + " Producing value of n: " +n);
 		notify();   //notifies consumer
 		rest = true;
 	}
@@ -38,12 +38,15 @@ class Producer implements Runnable{
 	Q q;
 	Producer(Q q){
 		this.q= q;
-		t = new Thread(this, "Producer Thread");
+		t = new Thread(this, " Producer Thread ");
 	}
 	public void run() {
-		int i= 0;
+	/*	int newValue= 0;
 		while(true) {
-			q.put(i++);
+			q.put(newValue++);
+		}*/
+		for(int i = 0; i< 5;i++){
+			q.put(i);
 		}
 	}
 }
@@ -53,11 +56,11 @@ class Consumer implements Runnable{
 	Q q;
 	Consumer(Q q){
 		this.q= q;
-		t = new Thread(this, "Consumer Thread");
+		t = new Thread(this, " Consumer Thread ");
 	}
 	public void run() {
 		while(true) {
-			q.get();;
+			q.get();
 		}
 	}
 }

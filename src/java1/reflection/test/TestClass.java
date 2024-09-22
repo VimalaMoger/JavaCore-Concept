@@ -1,5 +1,5 @@
 
-package java1.test;
+package java1.reflection.test;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
@@ -8,7 +8,7 @@ import java.lang.reflect.Method;
 public class TestClass {
 	@Test
 	public void test() {
-            sortBookData.Book book = new sortBookData.Book("Effective Java-1", "Joshua Bloch", 2001);
+            model.sortBookData.Book book = new model.sortBookData.Book("Effective Java-1", "Joshua Bloch", 2001);
 		     Method[] methods = book.getClass().getDeclaredMethods();
 
 		      for ( int i = 0; i < methods.length; i++ ) {
