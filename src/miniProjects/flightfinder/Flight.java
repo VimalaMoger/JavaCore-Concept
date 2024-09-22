@@ -19,7 +19,7 @@ public class Flight implements Comparable<Flight> {
 		@Override
 		public int compareTo(Flight flight) {
 			return this.getArrivalTime().compareTo(flight.getArrivalTime());
-			}
+		}
 }
 
 
