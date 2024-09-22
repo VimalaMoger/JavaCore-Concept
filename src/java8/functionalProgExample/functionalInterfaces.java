@@ -7,7 +7,7 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
-import sortBookData.Book;
+import model.sortBookData.Book;
 
 public class functionalInterfaces {
 

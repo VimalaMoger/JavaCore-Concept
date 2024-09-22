@@ -1,8 +1,8 @@
-package java5.threads.runnable;
+package java1.thread_basics;
 
 import java.util.concurrent.TimeUnit;
 
-public class ThreadTasks {
+public class Demo3 {
 
 	public static void main(String[] args) {
 		System.out.println("Thread Name: "+Thread.currentThread());
@@ -11,8 +11,8 @@ public class ThreadTasks {
 		t.setName("Runnable Thread");
 		t.setPriority(Thread.MAX_PRIORITY);
 		t.start();
-		
-		MyNewThread myNewThread = new MyNewThread();
+
+		CreateNewThread myNewThread = new CreateNewThread();
 		Thread thread =  new Thread(myNewThread);
 		thread.setName("MyNewThread Thread");
 		
@@ -35,6 +35,7 @@ public class ThreadTasks {
 	}
 }
 
+//Thread implementation
 class Task implements Runnable{
 
 	@Override
@@ -53,9 +54,9 @@ class Task implements Runnable{
 	}
 	
 }
-class MyNewThread implements Runnable{
+class CreateNewThread implements Runnable{
 	Thread t;
 	public void run() {
-		System.out.println("New thread created ");
+		System.out.println(" My New thread created ");
 	}
 }

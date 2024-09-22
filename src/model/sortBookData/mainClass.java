@@ -1,4 +1,4 @@
-package sortBookData;
+package model.sortBookData;
 
 import java.util.Arrays;
 import java.util.Collections;

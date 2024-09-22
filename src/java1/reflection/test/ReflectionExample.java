@@ -1,4 +1,4 @@
-package java1.test;
+package java1.reflection.test;
 
 import java1.reflection.Reflection;
 import org.junit.Before;

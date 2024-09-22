@@ -1,6 +1,6 @@
 package java8.collection;
 
-import sortBookData.Book;
+import model.sortBookData.Book;
 import java.util.Set;
 import java.util.TreeSet;
 

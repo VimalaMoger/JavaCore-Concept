@@ -1,4 +1,4 @@
-package java5.threads;
+package java1.thread_basics;
 
 class ThreadOne implements Runnable{
 	String name;
@@ -20,7 +20,7 @@ class ThreadOne implements Runnable{
 	}
 }
 
-public class join_isAlive {
+public class Demo4 {
 	
 	public static void main(String [] args) {
 		
@@ -31,13 +31,13 @@ public class join_isAlive {
 		t2.t.start();
 		t3.t.start();
 		try{
+			t1.t.interrupt();
+			System.out.println(" t1.t.isAlive() " +t1.t.isAlive());
 			t1.t.join();
 			t2.t.join();
 			t3.t.join();
 		}catch(InterruptedException e){
-			System.out.println(e);
+			System.out.println("t1 interrupted ");
 		}
-		//t2.t.start();
-		//t3.t.start();
 	}
 }

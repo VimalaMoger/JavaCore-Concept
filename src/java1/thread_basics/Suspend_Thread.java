@@ -1,4 +1,4 @@
-package java5.threads;
+package java1.thread_basics;
 
 //suspend and resume a thread
 
@@ -17,40 +17,44 @@ class MyThread2 implements Runnable{
 			try{
 				Thread.sleep(1000);
 				System.out.println(i);
-				synchronized(this) {  		//synchronized block
-					while(suspendThread) {
-						System.out.println("pausing thread");
+				synchronized(this) {        //synchronized block
+					if (suspendThread) {
+						System.out.println(Thread.currentThread().getName() + " paused ");
 						wait();
 					}
 				}
+				suspendThread();
 			}catch(InterruptedException e){
 				System.out.println(e);
 			}
+			//resumeT();
 		}
+
 	}
-	synchronized void suspendT() {
-		suspendThread=true;
+
+	synchronized void suspendThread() {
+			suspendThread = true;
 	}
-	synchronized void resumeT() {
-		suspendThread=false;
-		notify();
-		System.out.println("resuming thread");
-	}
+
+/*	synchronized void resumeT () {
+			suspendThread = false;
+			System.out.println(Thread.currentThread().getName() + " notified ");
+			notify();
+	}*/
 }
 
-//suspend, resume, stop methods found in old version of java
-public class SuspendThread {
+public class Suspend_Thread {
 
 	public static void main(String[] args) {
 		//Thread t = new Thread();
 		MyThread2 m = new MyThread2("Thread One");
 		m.t.start();
-		
+
+		//main thread sleeps about 5secs
 		try {
 			Thread.sleep(5000);
 		}catch(InterruptedException e) {
 			System.out.println(e);
 		}
-		m.suspendT();
 	}
 }

@@ -1,4 +1,4 @@
-package sortBookData;
+package model.sortBookData;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
