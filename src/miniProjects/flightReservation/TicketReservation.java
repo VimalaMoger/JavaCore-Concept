@@ -30,16 +30,16 @@ public class TicketReservation {
     		 waitingList.add(p);
     		 reserve = true;
     	 }else
-    		 reserve = false;
+    		reserve = false;
 		return reserve;
     }
 
      public void display() {
     	 for(Passenger p : confirmedList) {
-			 System.out.println(p.toString());
-		 }
+		System.out.println(p.toString());
+	 }
     	 for(Passenger p : waitingList) {
-    		 System.out.println(p.toString());
+    		System.out.println(p.toString());
     	 }
      }
 
@@ -67,8 +67,7 @@ public class TicketReservation {
 	    	  return true;
 	      }else if(bool1) {
 	    	  return true;
-	      }
-	      
+	      }	      
 	     return false;
     }
 
