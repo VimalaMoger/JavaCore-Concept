@@ -3,7 +3,7 @@ package java5.generics;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class withoutGenerics {
+public class WithoutGenerics {
 
 	public static void main(String[] args) {
 		ArrayList list = new ArrayList();
@@ -12,10 +12,7 @@ public class withoutGenerics {
 		list.add("three");
 		Iterator it = list.iterator();
 		while(it.hasNext()) {
-			String s=(String) it.next();  //explicit cast required
+			String s = (String) it.next();  //explicit cast required
 		}
-		
-
 	}
-
 }

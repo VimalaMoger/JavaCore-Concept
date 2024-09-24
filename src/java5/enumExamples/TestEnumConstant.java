@@ -16,10 +16,10 @@ class TestEnumConstant {
 		    String expectedMd5 = "292a5af68d31c10e31ad449bd8f51263";
 		    Application app = new Application();
 		    
-		    assertEquals(expectedTrim,app.applyOperation(enumBasics.TRIM, input));
-		    assertEquals(expectedToUpper,app.applyOperation(enumBasics.TO_UPPER, input));
-		    assertEquals(expectedReverse,app.applyOperation(enumBasics.REVERSE, input));
-		    assertEquals(expectedBase64,app.applyOperation(extendingEnum.BASE64_ENCODE, input));
+		    assertEquals(expectedTrim,app.applyOperation(EnumBasics.TRIM, input));
+		    assertEquals(expectedToUpper,app.applyOperation(EnumBasics.TO_UPPER, input));
+		    assertEquals(expectedReverse,app.applyOperation(EnumBasics.REVERSE, input));
+		    assertEquals(expectedBase64,app.applyOperation(ExtendingEnum.BASE64_ENCODE, input));
 	}
 
 }

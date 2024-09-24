@@ -1,11 +1,9 @@
 package model.Student;
 
 import lombok.Data;
-
 import java.util.Arrays;
 
 @Data
-
 public class Student {
     //class/static variable
     static int studentCount;
