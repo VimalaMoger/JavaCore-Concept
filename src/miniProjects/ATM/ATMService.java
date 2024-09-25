@@ -9,5 +9,4 @@ public class ATMService {
 		OptionMenu  menu = new OptionMenu();
 		menu.getLogin();
 	}
-
 }

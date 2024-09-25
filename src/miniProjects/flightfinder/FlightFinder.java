@@ -49,6 +49,7 @@ public class FlightFinder {
                 departingflights.add(flight);
             }
         }
+
         for(Flight f2: departingflights) {
         	System.out.println("departingFlights "+f2);     
         }
@@ -62,7 +63,8 @@ public class FlightFinder {
         for(Flight f2: allConnectingFlights) {
         	System.out.println("connectingFlights "+f2);     
         }
-        NavigableSet<Flight> connectingflights = new TreeSet<>();        
+        NavigableSet<Flight> connectingflights = new TreeSet<>();
+
         for(Flight flight: allConnectingFlights){
            LocalDateTime dt =((Flight) departingflights).getArrivalTime();
          

@@ -104,17 +104,15 @@ public class TicketReservation {
     	confirm =  reserve.bookFlight("Shally", "Rocks", 43, "female","economy" , "a9");
     	confirm =  reserve.bookFlight("James", "Willium", 43, "male","economy" , "a10");
 
-	boolean confirmRocky4 =  reserve.bookFlight("Rocky4", "Dave3", 43, "femala","economy" , "a11");
+		boolean confirmRocky4 =  reserve.bookFlight("Rocky4", "Dave3", 43, "femala","economy" , "a11");
 
-	System.out.println("confirm Rocky4\n " + confirmRocky4);
-    	reserve.display();
+		System.out.println("confirm Rocky4\n " + confirmRocky4);
+		reserve.display();
 
-    	boolean cancelled =reserve.cancel("a11");
-    	System.out.println("cancelled a11-confirmation Number\n " +cancelled);
+		boolean cancelled =reserve.cancel("a11");
+		System.out.println("cancelled a11-confirmation Number\n " +cancelled);
 
-	System.out.println("After removing a11\n");
-    	reserve.display();
-    
+		System.out.println("After removing a11\n");
+		reserve.display();
     }
-
 }

@@ -42,8 +42,6 @@ public class Passenger {
 	public String toString() {
 		return "Passenger [firstName=" + firstName + ", lastName=" + lastName + ", age=" + age + ", gender=" + gender
 				+ ", travelClass=" + travelClass + ", confirmationNumber=" + confirmationNumber + "]";
-	}	
-	
-	
+	}
 }
 
