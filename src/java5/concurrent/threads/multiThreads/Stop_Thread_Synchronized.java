@@ -19,10 +19,10 @@ public class Stop_Thread_Synchronized {
             throw new RuntimeException(e);
         }
        // stop = true;
-        requstStop();
+        requestStop();
     }
 
-    private static synchronized void requstStop() {
+    private static synchronized void requestStop() {
         stop = true;
     }
     private static synchronized boolean stop() {

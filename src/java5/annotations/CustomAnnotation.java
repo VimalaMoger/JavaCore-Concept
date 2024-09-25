@@ -22,13 +22,11 @@ public @interface CustomAnnotation {
 
 @CustomAnnotation(value = "123", name = "John", age = 20)
 class MyClass{
-
-
 }
 
 class Subclass extends MyClass{
-
 }
+
 class MainClass {
     public static void main(String[] args) {
         //accessing class level annotation using Reflection
@@ -40,7 +38,6 @@ class MainClass {
                 System.out.println("newNames " + Arrays.toString(((CustomAnnotation) annotation).newNames()));
             }
         }
-
 
         //accessing method level annotation
         Class animalClass = Animal.class;
@@ -98,6 +95,7 @@ class Animal {
     public void say() {
     }
 
+    //parameter with annotation
     public void getInput(@CustomAnnotation(value = "ID111", name = "John", age = 20) String parameter) {
     }
 }

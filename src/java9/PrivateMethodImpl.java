@@ -20,6 +20,3 @@ public interface PrivateMethodImpl {
     }
 
 }
-
-
-
