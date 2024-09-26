@@ -86,7 +86,7 @@ class MainClass {
     }
 }
 
-class Animal {
+class ClassA {
     @CustomAnnotation(age = 100, name="someName",  value = "Hello World")
     public String myField = null;
 
