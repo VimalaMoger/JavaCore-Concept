@@ -3,6 +3,7 @@ package java10;
 import java.util.List;
 import java.util.function.BiFunction;
 
+
 public class varDemo {
     public static void main(String[] args) {
 
