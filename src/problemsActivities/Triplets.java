@@ -1,4 +1,4 @@
-package CodingProblems;
+package problemsActivities;
 
 import java.util.ArrayList;
 import java.util.Collections;
