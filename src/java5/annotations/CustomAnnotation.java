@@ -56,7 +56,6 @@ class MainClass {
                 System.out.println("name " + ((CustomAnnotation) annotation).name());
                 System.out.println("NewNames " + Arrays.toString(((CustomAnnotation) annotation).newNames()));
             }
-
         }
 
         //accessing parameter annotations
@@ -80,7 +79,6 @@ class MainClass {
                 System.out.println("value " + ((CustomAnnotation) annotation).value());
             }
         }
-
     }
 }
 
