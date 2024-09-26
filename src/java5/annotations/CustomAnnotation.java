@@ -40,14 +40,14 @@ class MainClass {
         }
 
         //accessing method level annotation
-        Class animalClass = Animal.class;
+        Class classA = ClassA.class;
         Method method = null;
         Method methodParameter = null;
         Field field = null;
         try {
-            method = animalClass.getMethod("say", null);
-            methodParameter = animalClass.getMethod("getInput", String.class);
-            field = animalClass.getField("myField");
+            method = classA.getMethod("say", null);
+            methodParameter = classA.getMethod("getInput", String.class);
+            field = classA.getField("myField");
         } catch (NoSuchMethodException | NoSuchFieldException e) {
             throw new RuntimeException(e);
         }
@@ -58,7 +58,6 @@ class MainClass {
                 System.out.println("name " + ((CustomAnnotation) annotation).name());
                 System.out.println("NewNames " + Arrays.toString(((CustomAnnotation) annotation).newNames()));
             }
-
         }
 
         //accessing parameter annotations
@@ -68,7 +67,7 @@ class MainClass {
         for (Annotation[] annotationList : parameterAnnotations) {
             for (Annotation annotation : annotationList) {
                 if (annotation instanceof CustomAnnotation) {
-                    System.out.print("accessing parameter annotations... ");
+                    System.out.print("Accessing parameter annotations... ");
                     System.out.println("value " + ((CustomAnnotation) annotation).value());
                 }
             }
@@ -78,15 +77,14 @@ class MainClass {
         Annotation[] fieldAnnotations = field.getDeclaredAnnotations();
         for(Annotation annotation : fieldAnnotations){
             if(annotation instanceof CustomAnnotation){
-                System.out.print("accessing parameter annotations... ");
+                System.out.print("Accessing Field level annotations... ");
                 System.out.println("value " + ((CustomAnnotation) annotation).value());
             }
         }
-
     }
 }
 
-class Animal {
+class ClassA {
     @CustomAnnotation(age = 100, name="someName",  value = "Hello World")
     public String myField = null;
 
