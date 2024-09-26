@@ -1,4 +1,4 @@
-package jdk15;
+package java15;
 
 public class UsingInstanceOf {
     public static void main(String[] args) {

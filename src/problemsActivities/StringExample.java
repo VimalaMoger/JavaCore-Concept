@@ -1,4 +1,4 @@
-package CodingProblems;
+package problemsActivities;
 
 public class StringExample {
 
