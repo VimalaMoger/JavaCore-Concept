@@ -1,11 +1,9 @@
 package java5.annotations;
 
-
 import java.lang.annotation.*;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.Arrays;
-
 
 @Documented  //visible in JavaDoc for classes using this annotation
 @Inherited  //child class inherits from  a class annotated with this
@@ -40,14 +38,14 @@ class MainClass {
         }
 
         //accessing method level annotation
-        Class animalClass = Animal.class;
+        Class classA = ClassA.class;
         Method method = null;
         Method methodParameter = null;
         Field field = null;
         try {
-            method = animalClass.getMethod("say", null);
-            methodParameter = animalClass.getMethod("getInput", String.class);
-            field = animalClass.getField("myField");
+            method = classA.getMethod("say", null);
+            methodParameter = classA.getMethod("getInput", String.class);
+            field = classA.getField("myField");
         } catch (NoSuchMethodException | NoSuchFieldException e) {
             throw new RuntimeException(e);
         }
@@ -68,7 +66,7 @@ class MainClass {
         for (Annotation[] annotationList : parameterAnnotations) {
             for (Annotation annotation : annotationList) {
                 if (annotation instanceof CustomAnnotation) {
-                    System.out.print("accessing parameter annotations... ");
+                    System.out.print("Accessing parameter annotations... ");
                     System.out.println("value " + ((CustomAnnotation) annotation).value());
                 }
             }
@@ -78,7 +76,7 @@ class MainClass {
         Annotation[] fieldAnnotations = field.getDeclaredAnnotations();
         for(Annotation annotation : fieldAnnotations){
             if(annotation instanceof CustomAnnotation){
-                System.out.print("accessing parameter annotations... ");
+                System.out.print("Accessing Field level annotations... ");
                 System.out.println("value " + ((CustomAnnotation) annotation).value());
             }
         }
