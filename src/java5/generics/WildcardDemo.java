@@ -3,30 +3,31 @@ package java5.generics;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GenTypes<T> {
-	public static void addNumbers(List<? super Integer> list) {
-	    for (int i = 0; i <= 10; i++) {
-	        list.add(i);
-	        System.out.print(list.get(i)+" ");
-	    }
-	}
+public class WildcardDemo<T> {
 	private T a;
-	public GenTypes(T a){
+
+	public WildcardDemo(){};
+	public WildcardDemo(T a){
 		this.a= a;
 		T b;
 	}
-
-	GenTypes(){};
-
+	//?- integer type argument
+	public static void addNumbers(List<? super Integer> list) {
+	    for (int i = 0; i <= 10; i++) {
+	        list.add(i);
+			//list.add(23.0); //error only integer type
+	        System.out.print(list.get(i)+" ");
+	    }
+	}
 	void go(List<Double> list) {
 		list.add(25.5);
 	}
 
 	public static void main(String[] args) {
-		//method implementation
-		new GenTypes<Integer>() {
+		//anonymous class impl
+		new WildcardDemo<Integer>() {
 			public void go() {
-				System.out.println("annonymous ");
+				System.out.println("Anonymous class go method ");
 			}
 		}.go();
 
@@ -38,7 +39,6 @@ public class GenTypes<T> {
 		addNumbers(list);
 
 		Object someObject = new Object();
-
 		Integer someInteger = 10;
 		someObject = someInteger;   // OK	Box<Number> box = new Box<Number>();
 		System.out.println("\n");
@@ -49,14 +49,17 @@ public class GenTypes<T> {
 		list1.add("hello");
 		String s =  (String) list1.get(0);
 
+		//using wildcard
+		//so ? type can be Number or Object type
 		List<? super Number> nums = new ArrayList<>();
 		nums.add(9.0);
 		nums.add(9);
 		nums.add(10);
-		nums.forEach(e -> System.out.println("e value in list2: "+e));
-	
-		new GenTypes().go(nums);
-		int element = (int) nums.get(2);
+		nums.forEach(e -> System.out.println("elements in nums: " + e));
+		//adding a value by calling go method
+		new WildcardDemo().go(nums);
+
+		int element = (int) nums.get(2); //3rd element
 		System.out.println(element);
 
 		List<? super Object> numbers = new ArrayList<>();
@@ -64,15 +67,16 @@ public class GenTypes<T> {
 		numbers.add(9);
 		numbers.add(-12);
 		numbers.add("dd");
-		numbers.clear();
-		System.out.println(numbers.contains(9));
+		//numbers.clear();
+		System.out.println("Object collection elements " + numbers.contains(9));
 
 		Box<Integer> b = new Box<>();
 		b.set(34);
 		Integer i = b.get();
-		System.out.println("i is: " +i);
+		System.out.println("Box : value is: " +i);
 	}
-	public static void someMethod(Number n) { System.out.println("n is " +n);
+	public static void someMethod(Number n) {
+		System.out.println("n is " + n);
 	}
 }
 
