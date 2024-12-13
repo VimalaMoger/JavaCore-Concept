@@ -1,4 +1,4 @@
-package java17;
+package java15;
 
 //sealed classes to restrict the inheritance hierarchy
 public sealed class Shape {     // omitted permits Circle, Square, Rectangle{

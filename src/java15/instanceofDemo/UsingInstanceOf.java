@@ -1,4 +1,4 @@
-package java15;
+package java15.instanceofDemo;
 
 public class UsingInstanceOf {
     public static void main(String[] args) {

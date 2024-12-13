@@ -1,4 +1,4 @@
-package java15;
+package java15.instanceofDemo;
 
 public class BrushTool extends Tool {
 
