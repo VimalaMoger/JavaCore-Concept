@@ -17,9 +17,9 @@ public class EnumExample {
 
 	public static void main(String[] args) {
 
-		EnumExample.s="Hello";
+		EnumExample.s = "Hello";
 		System.out.println(EnumExample.s);
-		int x= 1;
+		int x = 1;
 		int y = 2;
 		for(Operators ops: Operators.values()) {
 			if (ops.get().equals("&")) {
