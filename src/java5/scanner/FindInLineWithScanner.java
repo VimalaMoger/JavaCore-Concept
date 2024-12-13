@@ -11,11 +11,11 @@ public class FindInLineWithScanner {
 		//finds the next occurrence
 		 scan.findInLine("age:");
 		
-			 if(scan.hasNext()) {
-				System.out.println(scan.next());
-			 }else {
-				 System.out.println("error");
-			 }
+		 if(scan.hasNext()) {
+			System.out.println(scan.next());
+		 }else {
+			 System.out.println("error");
+		 }
 		 scan.close();
 	}
 }
