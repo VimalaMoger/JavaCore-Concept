@@ -4,6 +4,7 @@ public class Season_switch {
     public static void main(String[] args) {
         int month = 14;
         String season;
+	//switch-case
         switch(month){
             case 12:
             case 1:

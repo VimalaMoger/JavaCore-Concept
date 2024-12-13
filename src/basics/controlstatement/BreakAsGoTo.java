@@ -7,8 +7,9 @@ public class BreakAsGoTo {
             second:{
                 third: {
                     System.out.println("Before the break ");
-                    if(t)
+                    if(t){
                         break second;
+		    }	
                     System.out.println("This won't execute ");
                 }
                 System.out.println("This won't execute ");

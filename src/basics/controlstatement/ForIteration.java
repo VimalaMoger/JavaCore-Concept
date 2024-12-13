@@ -18,7 +18,7 @@ public class ForIteration {
             i++;
         }
 
-        //nestedforloop
+        //nested for loop
        for(int j =0; j < 5;j++){
            for(int k=j; k<5; k++){
                System.out.print("*");

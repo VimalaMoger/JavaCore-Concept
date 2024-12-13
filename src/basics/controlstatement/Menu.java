@@ -16,6 +16,7 @@ public class Menu {
 
         }while(choice < '1' ||  choice > '5');
         System.out.println("\n");
+	//switch-case
         switch (choice){
             case '1':
                 System.out.println("If : \n");
