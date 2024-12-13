@@ -8,6 +8,7 @@ public class VarargTest {
 			System.out.println("a "+ a);
 		}
 	}
+	//inner class
 	static class staticClass{
 		static int sum=0;
 		static String count(String s, int ... a) {
@@ -17,6 +18,7 @@ public class VarargTest {
 			return s +sum;
 		}
 	}
+
 	public static void main(String[] args) {
 		VarargTest v = new VarargTest();
 		VarargTest.nonStatic nonstatic = v.new nonStatic();

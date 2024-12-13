@@ -20,7 +20,6 @@ public class StringBuilderExample {
 		}
 		String [] letters= {"A","A","M"};
 
-		//StringBuilder concat1= Arrays.stream(str).reduce(new StringBuilder(), (sb,s) -> sb.append(s), (sb1,sb2) -> sb1.append(sb2));
 		StringBuilder concat = Arrays.stream(letters)
 				.map(s -> new StringBuilder(s))
 				.reduce(new StringBuilder(), (sb1, sb2) -> sb1.append(sb2));
@@ -28,7 +27,7 @@ public class StringBuilderExample {
 		//....................OR........................................................
 		StringBuilder concat1= Arrays.stream(letters)
 				.map(b -> new StringBuilder().append(b))  //StringBuilder::new
-				.reduce(new StringBuilder(), (sb,s) -> sb.append(s));//StringBuilder::append//StringBuilder::append
+				.reduce(new StringBuilder(), (sb,s) -> sb.append(s));//StringBuilder::append
 		System.out.println(concat1);
 		
 	}
