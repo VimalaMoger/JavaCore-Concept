@@ -4,7 +4,6 @@ public class EditorState {
 	private final String content;
 	private final String fontName;
 	private final String fontSize;
-
 	
 	public EditorState(String content,String fontName, String fontSize) {
 		this.content =content;
