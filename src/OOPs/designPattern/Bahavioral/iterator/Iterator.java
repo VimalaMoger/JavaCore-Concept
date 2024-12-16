@@ -1,8 +1,8 @@
 package OOPs.designPattern.Bahavioral.iterator;
 
-public interface Iterator<T> {
+public interface Iterator {
     boolean hasNext();
-    T current();
+    String current();
     void next();
 
 
