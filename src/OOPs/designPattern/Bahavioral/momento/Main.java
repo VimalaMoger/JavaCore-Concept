@@ -20,7 +20,8 @@ public class Main {
 		//editor.setContent("b");
 		//history.push(editor.createState());
 		//editor.setContent("c");
-		history.pop();
+
+		//history.pop();
 		editor.restore(history.pop());
 		//editor.restore(history.pop());
 		System.out.println(editor);
