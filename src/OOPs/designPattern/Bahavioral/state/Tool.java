@@ -1,4 +1,4 @@
-package OOPs.designPattern.Bahavioral.StatePattern;
+package OOPs.designPattern.Bahavioral.state;
 
 /*public abstract class Tool {
 	//using either abstract or interface to remove common code in other classes

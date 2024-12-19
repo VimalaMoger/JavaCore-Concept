@@ -1,7 +1,7 @@
-package OOPs.designPattern.Bahavioral.StatePattern;
+package OOPs.designPattern.Bahavioral.state;
 
 public class Canvas {
-	private Tool currentTool;  //association
+	private Tool currentTool;
 	public void mouseDown() {
 		currentTool.mouseDown();
 	}
