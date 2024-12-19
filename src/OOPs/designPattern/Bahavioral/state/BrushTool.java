@@ -1,4 +1,4 @@
-package OOPs.designPattern.Bahavioral.StatePattern;
+package OOPs.designPattern.Bahavioral.state;
 
 public class BrushTool implements Tool {
 
