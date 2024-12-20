@@ -6,9 +6,8 @@ public class singletonUser {
 	private static singletonUser instance = new singletonUser();
 	private static String name;
 
-
 	private singletonUser() {
-		name= "ShanmuKha";
+		name= "Shanaya";
 	}
 
 	public static singletonUser getInstance() {

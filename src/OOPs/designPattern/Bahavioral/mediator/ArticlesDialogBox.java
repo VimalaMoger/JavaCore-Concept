@@ -1,7 +1,7 @@
 package OOPs.designPattern.Bahavioral.mediator;
-
+//Everytime changes happens in ListBox, TextBox, Button.. they notify to DialogBox
 public class ArticlesDialogBox extends  DialogBox{
-    private ListBox articleListBox =  new ListBox(this);
+    private ListBox articleListBox =  new ListBox(this);//this references to DialogBox
     private TextBox titleTextBox =  new TextBox(this);
     private Button saveButton =  new Button(this);//set to current object
 

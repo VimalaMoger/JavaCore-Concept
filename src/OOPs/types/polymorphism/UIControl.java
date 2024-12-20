@@ -1,4 +1,4 @@
-package OOPs.designPattern.polymorphism;
+package OOPs.types.polymorphism;
 
 public abstract class UIControl {
     public void enable(){

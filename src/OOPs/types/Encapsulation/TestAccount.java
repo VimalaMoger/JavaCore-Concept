@@ -1,4 +1,4 @@
-package OOPs.designPattern.Encapsulation;
+package OOPs.types.Encapsulation;
 
 public class TestAccount{
     public static void main(String[] args) {
