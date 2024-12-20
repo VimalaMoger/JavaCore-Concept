@@ -1,5 +1,9 @@
 package OOPs.designPattern.Bahavioral.strategy;
 
+/**
+ * Strategy allows passing different algorithms(behaviors) to an object and allows defining a template
+ * (skeleton) for an operation and specific steps will then be implemented in subclasses
+ */
 public class Main {
     public static void main(String[] args) {
 

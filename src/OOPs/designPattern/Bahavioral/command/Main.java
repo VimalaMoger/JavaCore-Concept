@@ -2,6 +2,10 @@ package OOPs.designPattern.Bahavioral.command;
 
 import OOPs.designPattern.Bahavioral.command.fx.*;
 
+/**
+ * Command allows decouple a sender from a receiver. The sender will talk to the receiver through
+ * a command. Commands can be undone and persisted
+ */
 
 public class Main {
     public static void main(String[] args) {

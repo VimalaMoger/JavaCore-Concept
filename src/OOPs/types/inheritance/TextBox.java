@@ -1,4 +1,4 @@
-package OOPs.designPattern.inheritance;
+package OOPs.types.inheritance;
 
 public class TextBox extends  UIControl{
 

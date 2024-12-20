@@ -1,4 +1,4 @@
-package OOPs.designPattern.abstraction;
+package OOPs.types.abstraction;
 
 public class MailService {
     public void sendEmail(){

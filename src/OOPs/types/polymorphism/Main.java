@@ -1,4 +1,4 @@
-package OOPs.designPattern.polymorphism;
+package OOPs.types.polymorphism;
 
 public class Main {
     public static void main(String[] args) {

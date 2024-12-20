@@ -3,7 +3,9 @@ package OOPs.designPattern.Bahavioral.template;
 //of the SOLID principles)
 //also Inheritance concept for reusable purpose, for using pre-existing code
 
+
 public abstract class Task {
+
     private AuditTrail auditTrail;
 
     public Task(){
@@ -13,6 +15,7 @@ public abstract class Task {
     public Task(AuditTrail auditTrail){
         this.auditTrail = auditTrail;
     }
+
     public void execute(){
         auditTrail.record();
         doExecute();

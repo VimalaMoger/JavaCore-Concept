@@ -1,4 +1,4 @@
-package OOPs.designPattern.Encapsulation;
+package OOPs.types.Encapsulation;
 
 public class Account {
     private float balance;

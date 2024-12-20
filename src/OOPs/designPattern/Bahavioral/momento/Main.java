@@ -1,5 +1,8 @@
 package OOPs.designPattern.Bahavioral.momento;
 
+/**
+ * Momento allows restoring an object to its previous state
+ */
 public class Main {
 
 	public static void main(String[] args) {
