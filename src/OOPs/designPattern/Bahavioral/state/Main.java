@@ -2,6 +2,9 @@ package OOPs.designPattern.Bahavioral.state;
 
 /**
  * State allows an object to behave differently depending on the state it is in
+ * So, in Canvas class current Tool is chosen, depends on the current tool,
+ * the canvas class behaves differently
+ *
  */
 public class Main {
 

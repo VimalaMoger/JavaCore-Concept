@@ -1,16 +1,16 @@
 package OOPs.designPattern.Bahavioral.chainOfResponsibility;
 
 public abstract class Handler {
-    private  Handler next;
+    private  Handler newHandler;
 
-    public Handler(Handler next){
-        this.next = next;
+    public Handler(Handler newHandler){
+        this.newHandler = newHandler;
     }
     public void handle(HttpRequest request){
         if(doHandle(request))
             return;
-        if(next != null)
-            next.handle(request);
+        if(newHandler != null)
+            newHandler.handle(request);
     }
     public  abstract  boolean doHandle(HttpRequest request);
 }

@@ -1,8 +1,5 @@
 package OOPs.designPattern.Bahavioral.iterator;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class BrowseHistory {
     private Iterator iterator;
 
@@ -18,20 +15,7 @@ public class BrowseHistory {
         return urls[index];
     }
 
-
-/*    private List<String> urls = new ArrayList<>();
-
-    public void  push(String url){
-        urls.add(url);
-    }
-
-    public String  pop(){
-        var lastIndex = urls.size() - 1;
-        var lastUrl = urls.get(lastIndex);
-        urls.remove(lastUrl);
-        return lastUrl;
-    }*/
-
+    //returns one of the types of Iterator
     public Iterator createIterator() {
         return new ArrayIterator(this);
     }

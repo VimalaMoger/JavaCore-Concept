@@ -2,7 +2,6 @@ package OOPs.designPattern.Bahavioral.chainOfResponsibility;
 
 public class Compressor extends Handler{
 
-
     public Compressor(Handler next) {
         super(next);
     }

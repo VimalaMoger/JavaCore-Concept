@@ -1,15 +1,11 @@
 package OOPs.designPattern.Bahavioral.strategy;
 
+//This class will maintain reference to compressor and filter objects
+//Polymorphism principle used
 public class ImageStorage {
-    //Polymorpism principle used
-
     private Compressor compressor;
     private  Filter filter;
 
-  /*  public ImageStorage(Compressor compressor, Filter filter){
-        this.compressor = compressor;
-        this.filter = filter;
-    }*/
     //pass the task objects to this method
     public void store(String fileName, Compressor compressor, Filter filter){
         compressor.compress(fileName);
