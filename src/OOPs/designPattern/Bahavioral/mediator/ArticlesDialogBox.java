@@ -7,7 +7,8 @@ public class ArticlesDialogBox extends  DialogBox{
 
     public void simulateUserInteraction(){
         articleListBox.setSelection("Article 1");
-        articleListBox.setSelection(""); // set the button disabled
+        titleTextBox.setContent("TextTitle");
+        titleTextBox.setContent(""); // set the button disabled
         System.out.println("TextBox: " + titleTextBox.getContent());
         System.out.println("Button " + saveButton.isEnabled());
     }

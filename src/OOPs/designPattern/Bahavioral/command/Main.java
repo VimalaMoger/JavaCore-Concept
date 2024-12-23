@@ -5,6 +5,9 @@ import OOPs.designPattern.Bahavioral.command.fx.*;
 /**
  * Command allows decouple a sender from a receiver. The sender will talk to the receiver through
  * a command. Commands can be undone and persisted
+ * Here service object created, this instance is passed to addCustomerCommand
+ * this command object is passed to Button instance, to process the request
+ * when button is clicked, customer is added
  */
 
 public class Main {

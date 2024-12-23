@@ -10,7 +10,7 @@ public class ArrayIterator implements Iterator{
 
     @Override
     public boolean hasNext() {
-        //return (index < history.getUrls().size());
+       // return (index < history.getUrls().length);
         return (index < history.index);
     }
 

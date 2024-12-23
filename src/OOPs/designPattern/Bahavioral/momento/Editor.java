@@ -30,7 +30,7 @@ public class Editor {
 		return new EditorState(content, fontName, fontSize);
 	}
 
-    //dependency state
+    //dependency relationship with EditorState
 	public void restore(EditorState state) {
 		content = state.getContent();
 		fontName = state.getfontName();

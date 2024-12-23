@@ -2,6 +2,8 @@ package OOPs.designPattern.Bahavioral.momento;
 
 /**
  * Momento allows restoring an object to its previous state
+ * Editor class has restore method, takes editor state object that were removed from history of objects
+ 	history object saves/removes the prev contents
  */
 public class Main {
 
@@ -12,7 +14,8 @@ public class Main {
 		editor.setContent("a");
 		editor.setFontName("New Roman");
 		editor.setFontSize("12");
-		history.push(editor.createState());
+		history.push(editor.createState());//editor object will create the state
+		// history will save the state
 
 		//2
 		editor.setContent("b");
